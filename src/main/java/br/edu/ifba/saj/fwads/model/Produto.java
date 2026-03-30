@@ -1,6 +1,8 @@
 package br.edu.ifba.saj.fwads.model;
 
-public class Produto {
+import br.edu.ifba.saj.fwads.model.AbstractModel;
+
+public class Produto extends AbstractModel {
     private String nome;
     private double peso;
     private double volume;

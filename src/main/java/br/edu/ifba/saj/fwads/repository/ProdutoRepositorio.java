@@ -4,8 +4,9 @@ import br.edu.ifba.saj.fwads.model.Produto; //importando a classe Produto
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
+import br.edu.ifba.saj.fwads.repository.GenericDAO;
 
-public class ProdutoRepositorio {
+public class ProdutoRepositorio extends GenericDAO<Produto> {
 
    private final HashMap<String, Produto> mapa = new HashMap<>();
 

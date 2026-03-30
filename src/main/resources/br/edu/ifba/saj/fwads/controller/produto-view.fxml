@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="br.edu.ifba.saj.fwads.controller.ProdutoController"
+            stylesheets="@catppuccin.css"
+            prefWidth="600" prefHeight="700"
+            style="-fx-background-color: #1e1e2e;">
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="32" AnchorPane.rightAnchor="32"
+          AnchorPane.topAnchor="32" AnchorPane.bottomAnchor="32">
+
+        <!-- Card principal -->
+        <VBox style="-fx-background-color: #181825; -fx-background-radius: 18; -fx-border-radius: 18; -fx-border-color: #313244; -fx-border-width: 1;"
+               spacing="24" maxWidth="520">
+            <padding><Insets top="32" right="36" bottom="32" left="36"/></padding>
+
+            <!-- Header com dots e título -->
+            <HBox alignment="CENTER" spacing="10">
+                <Circle radius="5" fill="#f38ba8" />
+                <Circle radius="5" fill="#fab387" />
+                <Circle radius="5" fill="#a6e3a1" />
+                <Text text="cadastro de produto" style="-fx-font-size: 15px; -fx-font-weight: 500; -fx-fill: #cdd6f4; -fx-font-family: 'JetBrains Mono', monospace;" />
+            </HBox>
+
+            <!-- Campos do formulário -->
+            <VBox spacing="12">
+
+                <!-- Nome -->
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label text="nome" style="-fx-font-size: 12px; -fx-font-weight: 500; -fx-text-fill: #cba6f7; -fx-min-width: 100; -fx-alignment: CENTER_RIGHT;" />
+                    <TextField fx:id="campoNome" promptText="ex: Flocão de Milho"
+                               styleClass="campo-texto" />
+                </HBox>
+
+                <!-- Peso -->
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label text="peso (kg)" style="-fx-font-size: 12px; -fx-font-weight: 500; -fx-text-fill: #cba6f7; -fx-min-width: 100; -fx-alignment: CENTER_RIGHT;" />
+                    <TextField fx:id="campoPeso" promptText="ex: 0.5"
+                               styleClass="campo-texto" />
+                </HBox>
+
+                <!-- Volume -->
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label text="volume (m³)" style="-fx-font-size: 12px; -fx-font-weight: 500; -fx-text-fill: #cba6f7; -fx-min-width: 100; -fx-alignment: CENTER_RIGHT;" />
+                    <TextField fx:id="campoVolume" promptText="ex: 0.02"
+                               styleClass="campo-texto" />
+                </HBox>
+
+                <!-- Quantidade -->
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label text="quantidade" style="-fx-font-size: 12px; -fx-font-weight: 500; -fx-text-fill: #cba6f7; -fx-min-width: 100; -fx-alignment: CENTER_RIGHT;" />
+                    <TextField fx:id="campoQuantidade" promptText="ex: 30"
+                               styleClass="campo-texto" />
+                </HBox>
+
+            </VBox>
+
+            <!-- Botões Adicionar / Remover -->
+            <HBox spacing="10">
+                <Button fx:id="btnAdicionar" text="adicionar produto" onAction="#adicionarProduto"
+                        styleClass="btn-primario" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnRemover" text="remover selecionado" onAction="#removerProduto"
+                        styleClass="btn-secundario" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+            </HBox>
+
+            <!-- Título da lista -->
+            <Text text="// lista de produtos"
+                  style="-fx-font-size: 12px; -fx-font-weight: 500; -fx-fill: #89b4fa; -fx-letter-spacing: 0.05em; -fx-text-transform: lowercase;" />
+
+            <!-- Lista de produtos -->
+            <ListView fx:id="listaProdutos" prefHeight="180"
+                      style="-fx-background-color: #11111b; -fx-border-color: #313244; -fx-border-radius: 12; -fx-background-radius: 12;" />
+
+            <!-- Baixa de estoque -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="campoBaixa" promptText="qtd para dar baixa"
+                           styleClass="campo-texto" HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnDarBaixa" text="dar baixa" onAction="#darBaixa"
+                        styleClass="btn-sucesso" />
+            </HBox>
+
+        </VBox>
+    </VBox>
+</AnchorPane>

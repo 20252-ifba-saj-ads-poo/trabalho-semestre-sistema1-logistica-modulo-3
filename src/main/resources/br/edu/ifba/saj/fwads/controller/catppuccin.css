@@ -1,0 +1,92 @@
+.root {
+    -fx-font-family: "JetBrains Mono", monospace, sans-serif;
+}
+
+/* Campos de texto */
+.campo-texto {
+    -fx-background-color: #313244;
+    -fx-border-color: #45475a;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 9 14;
+    -fx-font-size: 12px;
+    -fx-text-fill: #cdd6f4;
+    -fx-prompt-text-fill: #6c7086;
+}
+
+.campo-texto:focused {
+    -fx-border-color: #cba6f7;
+}
+
+/* Botão primário (Adicionar) */
+.btn-primario {
+    -fx-background-color: #cba6f7;
+    -fx-text-fill: #1e1e2e;
+    -fx-background-radius: 30;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-padding: 10 0;
+    -fx-cursor: hand;
+}
+
+.btn-primario:hover {
+    -fx-background-color: #b4a0e8;
+}
+
+/* Botão secundário (Remover) */
+.btn-secundario {
+    -fx-background-color: transparent;
+    -fx-border-color: #f38ba8;
+    -fx-text-fill: #f38ba8;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-padding: 10 0;
+    -fx-cursor: hand;
+}
+
+.btn-secundario:hover {
+    -fx-background-color: rgba(243, 139, 168, 0.1);
+}
+
+/* Botão de baixa (sucesso) */
+.btn-sucesso {
+    -fx-background-color: #a6e3a1;
+    -fx-text-fill: #1e1e2e;
+    -fx-background-radius: 8;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-padding: 9 20;
+    -fx-cursor: hand;
+}
+
+.btn-sucesso:hover {
+    -fx-background-color: #94d98e;
+}
+
+/* ListView customizada */
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: #11111b;
+    -fx-text-fill: #cdd6f4;
+    -fx-font-size: 12px;
+    -fx-padding: 10 14;
+}
+
+.list-cell:even {
+    -fx-background-color: #11111b;
+}
+
+.list-cell:selected {
+    -fx-background-color: rgba(203, 166, 247, 0.15);
+    -fx-text-fill: #cba6f7;
+}
+
+.list-cell .text {
+    -fx-fill: #cdd6f4;
+}
